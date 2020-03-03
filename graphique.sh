@@ -40,11 +40,12 @@ echo "($b / $a)*100 =  $c % "
 
 elif [[ $foo -eq 5 ]]; then
 
+Date=$(date +%F)
 a=$( ls -Al | wc -l )
 b=$( ls -lRrt | find -iname "*~.*" | wc -l ) 
 c=$((100*$b/$a))
 
-test3=$(echo " $c%" >> fichier.txt  | date +%F  >> fichier.txt )
+test3=$(echo "$Date $c%" >> fichier.txt   )
 
 
 elif [[ $foo -eq 6 ]]; then
