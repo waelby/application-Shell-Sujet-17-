@@ -43,11 +43,12 @@ echo "($b / $a)*100 =  $c % "
 *-s)
 
 
+Date=$(date +%F)
 a=$( ls -Al | wc -l )
 b=$( ls -lRrt | find -iname "*~.*" | wc -l ) 
 c=$((100*$b/$a))
 
-test3=$(echo " $c%" >> fichier.txt  | date +%F  >> fichier.txt )
+test3=$(echo "$Date $c%" >> fichier.txt   )
 
 
 ;;
